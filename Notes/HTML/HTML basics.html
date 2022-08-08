@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+</head>
+<body>
+    <centre>
+    <h1> HTML: HyperText Markup Language </h1>
+    </centre>
+
+    <p>
+        HTML (HyperText Markup Language) is the most basic building block of the Web. It is the standard markup language for Web pages.<br>
+        HTML (HyperText Markup Language) is the code that is used to structure a web page and its content. <br>
+        HTML defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). <br><br>
+
+        "Hypertext" refers to links that connect web pages to one another, either within a single website or between websites. <br>
+    </p>
+    <p>
+        HTML uses "markup" to annotate text, images, and other content for display in a Web browser. HTML markup includes special "elements" such as 
+        <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;body&gt;</code>, <code>&lt;header&gt;</code>, 
+        <code>&lt;footer&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;p&gt;</code>, 
+        <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;aside&gt;</code>, 
+        <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;datalist&gt;</code>, <code>&lt;details&gt;</code>,
+        <code>&lt;embed&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;output&gt;</code>, <code>&lt;progress&gt;</code>,
+        <code>&lt;video&gt;</code>, <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> 
+        and many others which are used to enclose, or wrap, different parts of the content to make it appear a certain way, or act a certain way.
+    </p>
+
+    <h3> HTML Element</h3>
+
+    <p>
+        An HTML element is a component of an HTML document that tells a web browser how to structure and interpret a part of the HTML document. HTML elements can contain formatting instructions, semantic meaning, and content. <br>
+        An HTML element is set off from other text in a document by "tags", which consist of the element name surrounded by "<" and ">". The name of an element inside a tag is case insensitive.
+    </p>
+
+    <h3> Anatomy of an HTML Element </h3>
+    <img src="E:\Web Development\images\anatomy_of_HTML_Element.png" alt="Anatomy of HTML Element">
+    <p>
+
+        The main parts of an element are as follows:
+        <ol>
+            <li><strong>The opening tag:</strong> This consists of the name of the element (in this case, p), wrapped in opening and closing angle brackets. This states where the element begins or starts to take effect — in this case where the paragraph begins.</li>
+            <li><strong>The closing tag:</strong> This states where the element ends — in this case where the paragraph ends. Failing to add a closing tag can lead to strange results.</li>
+            <li><strong>The content:</strong>     This is the content of the element, which in this case, is just text.</li>
+        </ol>
+        Elements can also have attributes that look like the following:
+        <img src="E:\Web Development\images\html_attribute.png" alt="HTML Element Attribute"> <br>
+        Attributes contain extra information for the browser about the element to specify modifications to that HTML element.
+        An attribute should always have the following:
+        <ol>
+            <li>A space between it and the element name (or the previous attribute, if the element already has one or more attributes).</li>
+            <li>The attribute name followed by an equal sign.</li>
+            <li>The attribute value wrapped by opening and closing quotation marks.</li>
+        </ol>   
+        
+        Some HTML Elements can also be self-closing tags, such as <code>&lt;br&gt;</code>, <code>&lt;hr&gt;</code>, etc. <br><br>
+
+        <b>Nesting Elements</b> - HTML Elements can be put inside other elements:   <i>I have <strong> strong Machine Learning </strong> skills. </i><br>
+
+        <b>Empty Elements</b> - HTML Elements which have no content are called Empty Elements  <br><br>
+
+    </p>
+
+    <h3> Comment lines in HTML </h3>
+    <p>
+        An HTML comment begins with <code>&lt!––</code> and the comment closes with <code>––&gt</code> (inspect this paragraph here to see comment in HTML). HTML comments support multi-line comments. <br>
+        HTML comments are visible to anyone that views the page source code, but are not rendered when the HTML document is rendered by a browser. <br>
+        <code> &lt;!–– This is a single line comment ––&gt;</code>  <br>
+        <code> &lt;!–– These are <br>
+                     multi-line <br>
+                     comments ––&gt;</code> 
+        
+    </p>
+
+    <h3>Anatomy of an HTML document </h3>
+
+    <p>
+        By convention, the HTML file of Home page of a website is named <code> index.html</code> <br>
+        Let us consider the following index.html file <br>
+    </p>
+
+    <code>
+        &lt!DOCTYPE html&gt <br>
+        &lthtml&gt <br>
+        &ensp;    &lthead&gt <br>
+        &emsp;      &ltmeta charset="utf-8"&gt <br>
+        &emsp;      &ltmeta name="description" content="This is a web page for HTML basics notes"&gt <br>
+        &emsp;      &ltmeta name="author" content="Vibhu Manikpuri"&gt <br>
+        &emsp;      &lttitle&gt homepage &lt/title&gt <br>
+        &ensp;    &lt/head&gt <br>
+        &ensp;    &ltbody&gt  <br>
+        &emsp;        &lth4&gt This is my home page &lt/h4&gt <br>
+        &ensp;    &lt/body&gt <br>
+        &lt/html&gt <br>
+    </code> <br>
+    
+    <ul>
+        <li><code> &lt;!DOCTYPE html&gt; </code> -- doctype is a required preamble and tells the browser the version of HTML being used in this file. </li> 
+        <li><code> &lt;html&gt &lt/html&gt;</code> -- The <code>&lt;html&gt;</code> element wraps all the content on the entire page and is sometimes known as the root element. Everything wrapped inside this element is HTML code</li> 
+        <li><code> &lt;head&gt &lt/head&gt;</code> -- The <code>&lt;head&gt;</code> is the part of the web page that holds the information about the web page and tells the browser how to handle the webpage. It acts as container for things like title, metadata, desription for web page when appearing in Search Engine, CSS to style the content of HTML page, and more</li>
+        <li><code> &lt;title&gt &lt/title&gt;</code> -- The <code>&lt;title&gt;</code> sets the title of the page, which is the title that appears in the browser tab the page is loaded in</li>
+        <li><code> &lt;meta charset="utf-8"&gt;</code> -- The <code>&lt;meta&gt;</code> element contain metadata for our HTML page. <code>&ltmeta charset="utf-8"&gt</code> sets the character set for HTML document to UTF-8. UTF-8 is the standard encoding that we should be using as it includes most characters from the vast majority of written languages. Other than character-set, this element also let's us add other meta data such as author, view port, etc</li> 
+        <li><code> &lt;body&gt;</code> -- The <code>&lt;body&gt;</code> element contains <i>all</i> the content that you want to show to web users when they visit the web page, which may include text, images, videos, games, or more </li>
+    </ul>
+    
+    <h3>Fundamental HTML tags</h3>
+    <p>
+        Other than <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;title&gt;</code>, <code>&lt;meta&gt;</code> and <code>&lt;body&gt;</code> elements, following are some fundamental HTML elements or family of elements
+    </p>
+    <ul>
+        <li>Image <br>
+            <code>&lt;img src="images/path_to_image/directory/image.png" alt="this is an image"&gt;</code> <br>
+            The img element embeds an image into our page in the position it appears. The <code>src</code> attribute contains the path to image file. The <code>alt</code> attribute hilds a text description of the image.
+        </li>
+
+        <li>Headings <br>
+            Heading elements allow us to specify some parts of the HTML file as headings or sub-headings. HTML contains 6 heading levels <code>&lt;h1&gt; - &lt;h6&gt;</code>. <br>
+            <code>&lt;h1&gt;  Main Title &lt;/h1&gt;</code> <br>
+            <code>&lt;h3&gt;  Sub-Title &lt;/h3&gt;</code> <br>
+
+
+        </li>
+
+        <li>Paragraph <br>
+            This element is used for conataining paragraphs of text. <br>
+            <code>&lt;p&gt; This is a single paragraph &lt;/p&gt;</code> <br>
+        </li>
+
+        <li>Lists <br>
+            HTML has special elements for lists. The most common list types are <br>
+            <ol>
+            <li><strong>Unordered lists</strong> are for lists where the order of the items doesn't matter, such as a shopping list. These are wrapped in a <code>&lt;ul&gt;</code> element.</li>
+            <li><strong>Ordered lists</strong> are for lists where the order of the items does matter, such as ranks of teams. These are wrapped in a <code>&lt;ol&gt;</code> element.</li>
+            </ol>
+            Each item inside the lists is put inside an <code>&lt;li&gt;</code> (list item) element.
+        </li>
+        
+        <li>Links
+            Links are very important - they are what makes the web the web. Links are added to an HTML file using the <code>&lt;a&gt;</code> element. <br>
+            An <code>&lt;a&gt;</code> element, with it's <u>href</u> attribute creates a hyperlink to web pages, files, images, locations in the same page, or anything else a URL can address. <br>
+            Content within each <code>&lt;a&gt;</code> should indicate the link's destination. <br>
+            Steps to turn text within a paragraph into a link: <br>
+            <ol>
+                <li>
+                    Choose some text. Let's choose "this is my LinkedIn profile"
+                </li>
+
+                <li>
+                    Wrap the text in &lt;a&gt; element, as shown below: <br>
+                    <code>&lt;a&gt; this is my LinkedIn profile &lt;/a&gt;</code>
+                </li>
+
+                <li>
+                    Give the &lt;a&gt; element an <code>href</code> attribute, as shown below: <br>
+                    <code>&lt;a href=""&gt; this is my LinkedIn profile &lt;/a&gt;</code>
+                </li>
+
+                <li>
+                    Give the &lt;a&gt; element an <code>href</code> attribute that points to the URL or the image location, as shown below: <br>
+                    <code>&lt;a href="https://www.linkedin.com/in/manikpurivibhu/"&gt; this is my LinkedIn profile &lt;/a&gt;</code>
+                </li>
+
+
+            </ol>
+
+            <a href="https://www.linkedin.com/in/manikpurivibhu/">this is my LinkedIn profile</a> 
+        </li>
+
+        <li>The Content Division element <br>
+            The &lt;div&gt; HTML element is the generic container for flow content. It has no effect on the content or layout until styled in some way using CSS. <br>
+            As a "pure" container, the &lt;div&gt; element does not inherently represent anything. Instead, it's used to group content so it can be easily styled using the class or id attributes, marking a section of a document as being written in a different language (using the lang attribute), and so on. <br>
+            More on this (including it's code example) later when studying CSS.
+        </li>
+
+        <li>Generic Section <br>
+            The &lt;section&gt; HTML element represents a generic standalone section of a document, which doesn't have a more specific semantic element to represent it. Sections should always have a heading, with very few exceptions. (More on this later) <br>
+        </li>
+
+        <li>Break Line <br>
+            The &lt;br&gt; HTML element produces a line break in text (carriage-return). It is useful for writing a poem or an address, where the division of lines is significant. <br>
+        </li>
+
+        <li>Horizontal Rule <br>
+            The &lt;hr&gt; HTML element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section. <hr>
+        </li>
+
+        <li>Boldface element <br>
+            The &lt;b&gt; HTML element <b>bolds</b> a piece of text. However, it is recommended to use either CSS, or &lt;strong&gt; HTML element to draw reader's attention in a piece of text.
+        </li>
+
+        <li>Strong Importance <br>
+            The &lt;strong&gt; HTML element indicates that its contents have <strong>strong</strong> importance, seriousness, or urgency. Browsers typically render the contents in bold type.
+        </li>
+
+        <li>Idiomatic Text <br>
+            The &lt;i&gt; HTML element represents a range of text that is set off from the normal text for some reason, such as <i>italicized text</i>.
+        </li>
+
+        <li>Emphasis <br>
+            The &lt;em&gt; HTML element marks text that has stress emphasis. This element can be nested, with each level of nesting indicating a greater degree of emphasis. <br>
+        </li>
+
+        <li>The Details disclosure element <br>
+            The &lt;details&gt; HTML element creates a disclosure widget in which information is visible only when the widget is toggled into an "open" state. A summary or label must be provided using the &lt;summary&gt; element. <br>
+            <details>
+                <summary>Details</summary>
+                Something small enough to escape casual notice.
+            </details>
+        </li>
+ 
+        <li>Table <br>
+            The &lt;table&gt; HTML element represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. <br>
+            However, the &lt;table&gt; element can be used only via a set of other elements. These elements work in a heirarchical relationship.<br>
+
+            <ul>
+                <li>&lt;thead&gt;: The Table Head Element defines a set of rows defining the head of the columns of the table. </li>
+                <li>&lt;tbody&gt;: The Table Body Element encapsulates a set of table rows (&lt;tr&gt; elements), indicating that they comprise the body of the table (&lt;table&gt;). </li>
+                <li>&lt;tr&gt;: The Table Row Element defines a row of cells in a table. The row's cells can then be established using a mix of &lt;td&gt;  (data cell) and &lt;th&gt; (header cell) elements.                </li>
+                <li>&lt;td&gt;: The Table Data Cell Element defines a cell of a table that contains data. It contains the actual data to be stored in the table cells.</li>
+                <li>&lt;th&gt;: The Table Header Element defines a cell as header of a group of table cells. The exact nature of this group is defined by the <u>scope</u>  and <u>headers</u> attributes.</li>
+                <li>&lt;caption&gt;: The Table Caption element specifies the caption (or title) of a table. </li>
+            </ul>
+
+            
+            <table>
+                <caption> inspect this table to see code and how it works </caption>
+                <thead>
+                    <tr>
+                        <th scope="col"> </th>
+                        <th scope="col"> Column 1</th>
+                        <th scope="col"> Column 2</th>
+                        <th scope="col"> Column 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>The Subtle Art of not giving a F*ck</td>
+                        <td>Mark Manson</td>
+                        <td>4.8/5</td>
+                        <td>290</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Atomic Habits</th>
+                        <td>James Clear</td>
+                        <th scope="row">4.9/5</th>
+                        <td>493</td>
+                    </tr>
+                    <tr>
+                        <td>7 Habits of Highly Effective People</td>
+                        <td>Stephen R Covey</td>
+                        <td></td>
+                        <td>349</td>
+                    </tr>
+                </tbody>
+            </table> <br>
+
+            HTML Tables create simple tables. Following HTML 5, CSS used for styling HTML tables, such as adding borders, etc.
+        </li>
+
+        <hr><hr><hr><hr><hr>
+
+        <li><a href="E:\Web Development\Notes\HTML\HTML form.html">Form</a> <br>
+            The &lt;form&gt; HTML element represents a document section containing interactive controls for submitting information. <br>
+            The &lt;form&gt; element itself is unable to do anything, and requires other important HTML elements like &lt;label&gt;, &lt;input&gt;, etc  to perform any tasks. <br>
+
+            <code>
+                &lt;form  action="/notes.html" method="post" &gt; <br>
+                &emsp;    &lt;label&gt;Enter your name :&lt;/label&gt; <br>
+                &emsp;    &lt;input type="text" name="" value=""&gt; &lt;br&gt;<br>
+                &emsp;    &lt;label&gt;Enter your email :&lt;/label&gt;  <br>
+                &emsp;    &lt;input type="email" name="" value=""&gt; &lt;br&gt; <br>
+                &emsp;    &lt;input type="submit" name=""&gt; <br>
+                &lt;/form&gt;
+
+            </code>
+            <form action="/notes.html" method="post">
+                <label>Enter your name :</label>
+                <input type="text" name="" value=""><br>
+                <label>Enter your email :</label> 
+                <input type="email" name="" value=""> <br>
+                <input type="submit" name="">
+            </form>
+
+            <ul>
+            <li>The <code>action</code> attribute  defines the location (URL) where the form's collected data should be sent when it is submitted </li>
+            <li>The <code>method</code> attribute defines which HTTP method to send the data with (usually <code>get</code> or <code>post</code>) </li>
+            </ul>
+
+            <h3>Following are some essential HTML elements that pair with &lt;form&gt; to make it so powerful </h3>
+            <ul>
+                <li>
+                    The <code>&lt;input&gt;</code> HTML element is used to create interactive controls for web-based forms in order to accept data from the user; a wide variety of types of input data and control widgets are available, depending on the device and user agent. <br>
+                    We specify the <code>type</code> attribute to be <code>text</code>, <code>radio</code> ,<code>button</code>, <code>checkbox</code>, <code>color</code>, <code>date</code>, <code>email</code>, <code>file</code>, <code>password</code>, <code>time</code>, <code>url</code>, etc. to create various kinds of interactive controls for the form. <br><br> 
+                </li>
+                <li>
+                    The <code>&lt;label&gt;</code> HTML element represents a caption for an item in a user interface. It adds a label to a form control such as text, email, password, textarea etc. <br><br>
+                    The <code>&lt;label&gt;</code> element is associated with an <code>&lt;input&gt;</code> element such as text, email, etx of the form. <br><br>
+
+                </li>
+            </ul>
+            To associate the <code>&lt;label&gt;</code> with an <code>&lt;input&gt;</code> element, you need to give the <code>&lt;input&gt;</code> an <code>id</code> attribute. The <code>&lt;label&gt;</code> then needs a <code>for</code> attribute whose value is the same as the input's <code>id</code>. <br><br>
+            <code>
+                &lt;label for="first_name"&gt; First Name :&lt;/label&gt; <br>
+                &lt;input type="text" id="first_name"&gt;                         
+            </code>
+            <br><br>
+
+            The <code>for</code> attribute containes the <code>first_name</code> which matches the id of our input. So, this label is associated with this input element.  <br>
+            Alternatlively, <code>&lt;input&gt;</code> can also be nested directly inside the <code>&lt;label&gt;</code>, in which case the <code>for</code> and <code>id</code> attributes are not needed because the association is implicit. <Br>
+                <code>
+                    &lt;label&gt; First Name : <br>
+                    &emsp; &lt;input type="text" name="first_name"&gt;  <br>
+                    &lt;/label&gt; 
+                </code> <br>
+                
+            The <code>name</code> attribute in <code>&lt;input&gt;</code> is used as a key when the form is submitted and it's data is sent as a key-value pair using POST request. <br><br>
+            
+            <ul>
+
+                <li>Button <br>
+                    The &lt;input&gt; elements of type button are rendered as simple push buttons, which can be programmed to control custiom functionality anywheere on a webpage as required when assigned to an event handler function (typically the <i>click</i> event). <br>
+                    <code>
+                        &lt;input type="button" value="click me"&gt; 
+                    </code>
+                    <input type="button" value="click me">
+                </li>
+
+                <li>Submit <br>
+                    The &lt;input&gt; elements of type submit are rendered as buttons.When the <u>click</u> event occurs, the <u>user agent</u> attempts to submit the form to the server. <br>
+                    <code>
+                        &lt;input type="submit" value="submit form"&gt; 
+                    </code>
+                    <input type="submit" value="submit form">
+                </li>
+
+                <li>Reset <br>
+                    The &lt;input&gt; elements of type reset are rendered as buttons,  with a default <u>click</u> event handler that resets all of the inputs in the form to their initial values. <br>
+                    <code>
+                        &lt;input type="reset" value="clear"&gt; 
+                    </code>
+                    <input type="reset" value="clear">
+                </li>
+            </ul>
+            
+
+        </li>
+
+
+    </ul>
+
+    <h4>With this, we are finished with the basics of HTML-the bare minimum knowledge that will act as a good foundation to Full Stack Web Development. Of course, you can never learn enough.  But there is no better way to learn than to build. So build projects with the knowledge this web page provides and learn more through experience, tutorials, articles and documentation. Ciao!</h4>
+</body>
+</html>
+

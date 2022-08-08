@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up:accountabuddies</title>
+</head>
+<body>
+    <h1>Accountabuddies!</h1>
+    <form action="mailto:manikpurivibhu@gmail.com" method="post" enctype="text/plain">
+        
+        <label for="name"> Name: </label>
+        <input type="text" id="name" name="name">   <br>
+
+        <label for="email"> Email: </label>
+        <input type="email" id="email" name="email">   <br>
+
+        <label for="Age"> Age: </label>
+        <input type="number" name="id" id="age" min="16" max="108">   <br>
+
+        <label for="sex"> Sex: </label>
+        <select id="sex" name="sex">   
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+            
+        </select>   <br>
+        
+        Education: <br>
+        <input type="radio" id="High School" name="Education" value="High School" >   
+        <label for="High School"> High School</label>   <br>
+        <input type="radio" id="Under Graduation" name="Education" value="Under Graduation" >  
+        <label for="Under Graduation"> Under Graduation</label>   <br>
+        <input type="radio" id="Post Graduation" name="Education" value="Post Graduation" >  
+        <label for="Post Graduation"> Post Graduation</label>   <br>
+        <input type="radio" id="Doctorate" name="Education" value="Doctorate" >  
+        <label for="Doctorate"> Doctorate</label>   <br>
+
+        <label for="year"> Passing year: </label>
+        <input type="number" name="passing year" min="1900" max="2099" id="year" value="2022" placeholder="Enter year of most recent graduation">  <br>
+
+        <label for="resume"> Resume: </label>
+        <input type="file" name="resume" id="resume" accept=".doc,.pdf"> <br>
+
+        <label for="linkedin" > LinkedIn: 
+            <input type="url" name="LinedIn ID" id="linkedin"> 
+        </label> <br>        
+        
+        <label for="description"> Tell us about yourself!"
+            <input type="textarea" name="Description" id="description" rows="4" cols="18">
+        </label> <br>
+        
+        <input type="reset" value="Reset">
+        <input type="submit" value="Sign Up!">
+        <br>
+    </form>
+
+    <footer>
+        <h4>Accountabuddies!</h4>
+        <h5>Your accountability partner</h5>
+    </footer>
+    
+</body>
+</html>
