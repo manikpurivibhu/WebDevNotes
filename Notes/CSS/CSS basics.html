@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name = "description" content = "My personal CSS notes" />
+    <title>Introduction to CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <h1> Introduction to CSS </h1> 
+    <p>
+        CSS stands for <strong>Cascading Style Sheets</strong> and describes how HTML elements are to be displayed on screen, paper, or in other media. It is a language for specifying how documents are presented to users — how they are styled, laid out, etc.<br>
+        CSS saves a lot of work. It can control the layout of multiple web pages all at once thus making it much easier to style and prettify web pages and websites.  <br>
+    </p>
+    <hr>
+
+    <h3>CSS Syntax</h3> 
+    <p>
+        CSS is a rule-based language — the rules are defined by specifying groups of styles that should be applied to particular elements or groups of elements on the web page. 
+    </p>
+    <strong>Syntax:</strong> <br>
+    selector { property: value; <br>
+        &ensp;&ensp;                property: value; <br>
+        &ensp;&ensp;              property: value; <br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;} <br>
+    example: <br>
+    body { color: black; <br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;  background-color: white; <br>
+    &ensp;&ensp;&ensp;&ensp;&ensp;} 
+
+    <p>
+        <strong>CSS Convention:</strong> There are 2 simple rules to write CSS in convention: 
+        <ol>
+            <li>Each <code>property: value;</code> should be written in a new line rather than next to each other</li>
+            <li>Properties should be sorted in alphabetic order</li>
+        </ol>
+    </p>
+    <hr>
+
+    <h2> CSS Demo</h2>
+
+    <table class="center">
+        <tr>
+            <th>Demo HTML without any styling:</th>
+            <th>HTML element styled using CSS code</th>
+        </tr>
+        <tr>
+            <td> &lt;h4&gt;I am a level four heading &lt;/h4&gt; <br>
+                    <h4>I am a level four heading </h4></td>
+            <td> &lt;h4 style="color:#59CE8F;" &gt;I am a level four heading &lt;/h4&gt; <br>
+                <h4 style="color:#59CE8F;" >I am a level four heading </h4></td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2> CSS Structures</h2>
+    <p>There are three methods of applying CSS to a document: with an external stylesheet, with an internal stylesheet, and with inline styles.</p> 
+
+    <h3>Inline styles:</h3> 
+    <p>Inline styles are CSS declarations that affect <em>a single HTML element</em>, contained within <strong>style</strong> attribute of that element. The implementation of an inline style in an HTML document might look like this: </p> 
+
+    <table class="center">
+        <tr><td> &lt;h4&gt;I am a level four heading &lt;/h4&gt; <br>
+            <h4>I am a level four heading </h4></td>
+    <td> &lt;h4 style="color:#59CE8F;" &gt;I am a level four heading &lt;/h4&gt; <br>
+        <h4 style="color:#59CE8F;" >I am a level four heading </h4></td></tr>
+    </table>
+
+    <h3>Internal stylesheet:</h3> 
+    <p>An internal stylesheet resides within an HTML document. To create an internal stylesheet, you place CSS inside a <strong>style</strong> element contained inside the HTML <strong>head</strong>. </p> 
+    &lt;head&gt; <br>
+        &lt;title&gt; title-of-page&lt;/title&gt;<br>
+        &lt;meta&gt; metadata-of-page&lt;/meta&gt;<br>
+        &lt;style&gt; <br>
+            h4 { <br>
+                color:#FF1E00; <br>
+            } <br>
+        &lt;/style&gt; <br>
+    &lt;/head&gt; <br>
+
+    <h3>External stylesheet:</h3> 
+    <p>An external stylesheet contains CSS in a separate file with a <em>.css</em> extension. This is the most common and useful method of adding CSS to a document as it alows linking a single CSS file to muplitple web pages, styling all of them with the same CSS stylesheet thus avoiding repetitive work. <br>
+    To link <em>styles.css</em> to <em>index.html</em>, add the following line somewhere inside the <em>head</em> of the HTML document: </p> 
+    <p style="background-color: #f0d3cf; width:40%">&lt;link rel="stylesheet" href="styles.css"&gt; </p>  
+    <p>This &lt;link&gt; element tells the browser that we have a stylesheet, using the <em>"rel"</em> attribute, and the location of that stylesheet as the value of the <em>"href"</em> attribute. </p>
+
+    <strong>NOTE:</strong> It is recommended to implement all styles in an External CSS files to generalize the styles for a large website and customize the elements for each page using Inline or Internal CSS. <br>
+    <hr>    
+    
+    <h2>Selectors</h2> 
+
+    <p>A <strong>CSS selector</strong> is the part of a CSS rule that describes what elements in a document the rule will match. The matching elements will have the rule's specified style applied to them.
+    Consider the CSS: </p>
+    <code>
+    p { <br>
+      color: green; <br>
+    } </code> <br>
+    Here, the selector is <code>"p".</code> 
+    
+    <h3>Types of Selectors</h3>
+    <ul>
+        <li><strong>Type, class, and ID selectors</strong> <br>
+            This group includes selectors that target an HTML element such as <code>&lt;h1&gt;</code>, a class such as <code>.box{ }</code> or, an ID like <code>#unique { }</code>
+        </li>
+        
+        <li><strong>Attribute selectors</strong> <br>
+            This group of selectors gives us different ways to select elements based on the presence of a certain attribute on an element: <code> a[title] {} </code> or even make a selection based on the presence of an attribute with a particular value: <code>a[href="https://example.com"] { }
+            </code>
+        </li>
+        
+        <li><strong>Pseudo-classes and pseudo-elements</strong> <br>
+            A <strong>CSS pseudo-class</strong> is a keyword added to a selector that specifies a special state of the selected element(s). For example, <code>:hover</code> can be used to change a button's color when the user's pointer hovers over it. <br>
+            A <strong>CSS pseudo-element</strong> is a keyword added to a selector that lets you style a specific part of the selected element(s). For example, <code>::first-line</code> can be used to change the font of the first line of a paragraph.
+        </li>
+
+        <li><strong>Combinators</strong> <br>
+        Combinators combine other selectors in order to target elements within our documents. The following, for example, selects paragraphs that are direct children of <code>&lt;article&gt;</code> elements using the child combinator (&gt;): <code>article &gt: p { }</code>
+        </li>
+    </ul>
+    
+    <hr>
+
+    <h2>Class, ID, States and Pseudo-classes</h2> 
+
+    <h3>CSS Class</h3>
+    <p>
+        A CSS class is an attribute used to define a group of HTML elements in order to apply unique styling and formatting to those elements with CSS. <br>
+        To link a class to an element, add <code>class="class_name"</code> to element and define the properties and their corresponding values for that class in CSS file with <code>.class_name { property :value; }</code> <br>
+        Example: <br>
+        HTML: <code>&lt; h3 class="special" &gt; Items  &lt;h3&gt;</code> <br>
+        CSS:<code>.special { <br>
+            &emsp; color: orange; <br>
+            &emsp; text: black; <br>
+        }</code>
+    </p>
+    
+    <h3>CSS ID</h3>
+    A CSS ID selector uses the ID attribute of an HTML element to select one unique element on a page. To use an ID selector in CSS, simply write a hashtag (#) followed by the ID of the element. Then put the style properties you want to apply to the element in brackets.<br>
+    Example: <br>
+    HTML: &lt;div id="identified"&gt;This div has a special ID on it! &lt;/div&gt; <br>
+    CSS: <code>#identified { <br>
+        &emsp; background-color: skyblue; <br>
+    }</code>  <br> <br>  
+
+    Use <code>class</code> when you want to apply the same style to a group of related items and use <code>ID</code> to apply a specific style to a single element in the web page <br>
+
+    <h3>Pseudo-classes and pseudo-element </h3>
+    Pseudo-classes and pseudo-element specifies a special state of the selected element, such as <code>:hover</code> and <code>:visited</code>
+    
+    <hr>
+
+    <h2>Combinators</h2> 
+    <p>Combinators  combine other selectors in a way that gives them a useful relationship to each other and the location of content in the document. </p> 
+
+    <p><strong>Descendant combinator</strong> <br>
+    The descendant combinator — typically represented by a single space <code>(" ")</code> character — combines two selectors such that elements matched by the second selector are selected if they have an ancestor (parent, parent's parent, parent's parent's parent, etc.) element matching the first selector. <br>
+    example : match only the <code>&lt;p&gt;</code> element which is inside an element with a class of <code>.box</code> : <code>body article p</code> </p> 
+
+    <p><strong>Child combinator</strong> <br>
+    The child combinator <code>(&gt;)</code> matches only those elements matched by the second selector that are the direct children of elements matched by the first. Descendant elements further down the hierarchy don't match. <br>
+    example:  select only <code>p</code> elements that are direct children of <code>&lt;article&gt;</code> elements : <code>article > p </code></p>
+
+    <p><strong>Adjacent sibling combinator</strong> <br>
+    The Adjacent sibling combinator <code>(+)</code> matches only those elements matched by the second selector that are the next sibling element of the first selector. <br>
+    example:  select all <code>&lt;img&gt;</code> elements that are immediately preceded by a <code>&lt;p&gt;</code> element : <code>p + img</code> </p>
+
+    <p><strong>General sibling combinator</strong> <br>
+    The General sibling combinator <code>(~)</code> selects siblings of an element even if they are not directly adjacent. <br>
+    example: select all <code>&lt;img&gt;</code> elements that come anywhere after <code>&lt;p&gt;</code> elements : <code>p ~ img</code> </p>
+
+    It is worth noting that we can combine multiple selectors and combinators together. <br>
+    For example: select list items with a class of <code>"a"</code> which are direct children of a <code>&lt;ul&gt;</code> : <code>ul &gt; li[class="a"] { }</code>
+ 
+    <hr>
+
+    <h2>Cascade, Specificity and Inheritance</h2>
+
+    <p>In scenarios where two or more selectors try to style the same property of the same HTML element, CSS language has rules to control which selector is stronger in this event of conflict. These rules are called <strong>cascade</strong> and <strong>specificity</strong>. <br>
+    Cascade, Specificity, and Inheritance control how CSS is applied to HTML and how conflicts between style declarations are resolved. </p> 
+
+    <table style="border: 0;">
+        <tr>
+            <th scope="col">Cascade </th>
+            <td>When two rules from the same cascade layer apply and both have equal specificity, the one that is defined last in the stylesheet is the one that will be used. In pther words, the rules defined later in the stylesheet are used for styling</td>
+        </tr>
+        <tr>
+            <th scope="col">Specificity </th>
+            <td>If multiple style blocks have different selectors that configure the same property with different values and target the same element, specificity decides the property value that gets applied to the element</td>
+        </tr>
+        <tr>
+            <th scope="col">Inheritance </th>
+            <td>Some CSS property values set on parent elements are inherited by their child elements, and some are not For example : properties like <code>width</code>, <code>margin</code>, <code>padding</code> and <code>border</code> are not inherited properties.</td>
+        </tr>
+    </table> <br>
+
+    Order of importance: <p style="border-style:solid; border-width: 1px; display: inline-block; margin-left: 1rem;">Important flag(!important) > Inline CSS > ID Selector > Class Selector > HTML Element Selector</p>
+        
+    <hr>
+
+    <h2>Properties and Values</h2>
+        <div class="properties">    
+            At its most basic level, CSS consists of two components: 
+            <table style="border:none;">
+                <tr>
+                    <th align="col">Properties</th>
+                    <td>These are human-readable identifiers that indicate which stylistic features you want to modify. For example, <code>font-size</code>, <code>width</code>, <code>background-color</code>.</td>
+                </tr>
+                <tr>
+                    <th align="col">Values</th>
+                    <td>Each property is assigned a value. This value indicates how to style the property.</td>
+                </tr>
+            </table> 
+            
+            The example below highlights a single property and value. The property name is <code>color</code> and the value is <code>blue</code>.
+        </div>    
+    <img src="E:\Web Development\Notes\CSS\images\propertiesAndValuespng.jpg" alt="CSS property and value" class="properties-img">
+
+    <hr style="clear:right">
+
+    <h3>@rules</h3>
+    <p>At-rules are CSS statements that instruct CSS how to behave.
+    CSS @rules (pronounced "at-rules") provide instruction for what CSS should perform or how it should behave. </p>
+    Example : 
+    <table style="display:inline-block; border-width:0;">
+        <tr>
+            <td><code>@import 'styles2.css' </code></td>
+            <td><code>@import</code> imports a stylesheet into another CSS stylesheet</td>
+        </tr>
+    </table> 
+
+    <hr>
+
+    <h3>Shorthand properties</h3>
+    <p>Shorthand properties are CSS properties that let's us set the values of multiple other CSS properties simultaneously. Using a shorthand property, we can write more concise (and often more readable) style sheets, saving time and energy. </p>
+    <p> 
+        Example: 
+        <code>padding: 10px 15px 15px 5px;</code> 
+        is equivivalent to 
+        <code> {
+            padding-top: 10px; padding-right: 15px;
+            padding-bottom: 15px; padding-left: 5px; }
+        </code>
+    </p>
+
+    <hr>
+
+    <h3>Comments</h3>
+    <p> CSS comments begin with <code>/*</code> and end with <code>*/</code>. The same can be used for multi-line comments. </p>
+
+    <hr>
+
+    <h3>White Space</h3>
+    <p> Just as browsers ignore white space in HTML, browsers ignore white space inside CSS. The value of white space is how it can improve readability. </p>
+
+    <hr>
+
+    <h2>CSS Box Model</h2>
+    
+    <div class="box-model">
+    <p class="box-model">When laying out a document, the browser's rendering engine represents each element as a rectangular box according to the standard <strong>CSS basic box model</strong>. CSS determines the size, position, and properties (color, background, border size, etc.) of these boxes.<br>
+    Every box is composed of four parts (or areas), defined by their respective edges: the content edge, padding edge, border edge, and margin edge.</p>
+    </div>
+
+    <img src="images/css-box-model.png" alt="CSS-box-model">
+    
+    <div>
+        <h3>Content Area</h3>
+        <p>The <strong>content area</strong>, bounded by the content edge, contains the "real" content of the element, such as text, an image, or a video player. Its dimensions are the content width and the content height.</p>
+        <p> the content area's size (for Block element) can be explicitly defined with the <code>width</code>, <code>min-width</code>, <code>max-width</code>, <code>height</code>, <code>min-height</code> and <code>max-height.</code> </p>
+
+        <h3>Padding Area</h3>
+        <p>The <strong>padding area</strong>, bounded by the padding edge, extends the content area to include the element's padding. It is the space bwtween content area and border. Its dimensions are the padding-box width and the padding-box height.</p>
+        <p>The thickness of the padding is determined by the <code>padding-top</code>, <code>padding-right</code>, <code>padding-bottom</code>, <code>padding-left</code>, and shorthand <code>padding</code> properties.</p>
+
+
+        <h3>Border Area</h3>
+        <p>The border area, bounded by the border edge, extends the padding area to include the element's borders. It is (no shit) used to add border to HTML elements. Border-style can also be specified as <em>solid</em>, <em>dotted</em>, etc.</p>
+        <p>The thickness of the borders are determined by the <code>border-width</code> and shorthand <code>border</code> properties. If the <code>box-sizing</code> property is set to <code>border-box</code>, the border area's size can be explicitly defined with the <code>width</code>, <code>min-width</code>, <code>max-width</code>, <code>height</code>, <code>min-height</code>, and <code>max-height</code> properties. </p>
+
+        <h3>Margin Area</h3>
+        <p>The <strong>margin area</strong>, bounded by the margin edge, extends the border area to include an empty area used to separate the element from its neighbors. Its dimensions are the margin-box width and the margin-box height. It basically creates a buffer zone between the HTML element and all other HTML elements on screen.</p>
+        <p>The size of the margin area is determined by the <code>margin-top</code>, <code>margin-right</code>, <code>margin-bottom</code>, <code>margin-left</code>, and shorthand <code>margin</code> properties.</p>
+    </div>
+    
+    <p style="clear:right">Finally, note that for non-replaced inline elements, the amount of space taken up (the contribution to the height of the line) is determined by the <code>line-height</code> property, even though the borders and padding are still displayed around the content.</p>
+
+    <hr>
+
+    <h2>CSS Display</h2>
+
+    <p>The <strong>display</strong> CSS property sets whether an element is treated as a <code>block or inline element</code> and the layout used for its children, such as <code>flow layout</code>, <code>grid</code> or <code>flex</code>.</p>
+    <p>Formally, the <strong>display</strong> property sets an element's inner and outer <em>display types</em>. The outer type sets an element's participation in <code>flow layout</code>; the inner type sets the layout of children.</p>
+    <p>Syntax:   The CSS display property is specified using keyword values 
+    <code>display: block;</code>, <code>display:inline-flex;</code> </p>
+
+    <p>A <strong>Block Element</strong> generates line breaks bpth before and after the element. It takes the while width of the screen essentially pushing other elements to the bottom. ex: &lt;p&gt; and &lt;h1&gt;.</p>
+    <p>An <strong>Inline Element</strong> do not generate line breaks before or after themselves. They only take as much space as needed by them (height, width). ex: &lt;span&gt; and &lt;a&gt;</p>
+    <h3>CSS <strong>display</strong> Property Values</h3>
+    <table>
+        <tr>
+            <th>Value</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>block</td>
+            <td>Displays an element as a block element (ex: &lt;p&gt;). It starts on a new line, and takes up the whole width</td>
+        </tr>
+        <tr>
+            <td>inline</td>
+            <td>Displays an element as an inline element (ex: &lt;span&gt;). Any height and width properties will have no effect</td>
+        </tr>
+        <tr>
+            <td>contents</td>
+            <td>Makes the container disappear, making the child elements children of the element the next level up in the DOM</td>
+        </tr>
+        <tr>
+            <td>flex</td>
+            <td>Displays an element as a block-level flex container</td>
+        </tr>
+        <tr>
+            <td>grid</td>
+            <td>Displays an element as a block-level grid container</td>
+        </tr>
+        <tr>
+            <td>inline-block</td>
+            <td>Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values</td>
+        </tr>
+        <tr>
+            <td>table</td>
+            <td>Let the element behave like a &lt;table&gt; element</td>
+        </tr>
+        <tr>
+            <td>none</td>
+            <td>The element is completely removed</td>
+        </tr>
+    </table>
+
+    <p>There are more display porperty values which are out of scope of this introductory lesson to CSS.</p> 
+    
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+        
+    <article class="container">
+        <span>First</span>
+        <span>Second</span>
+        <span>Third</span>
+    </article>
+        
+    <div>
+        <label for="display">Choose a display value:</label>
+        <select id="display">
+          <option selected>block</option>
+          <option>inline</option>
+          <option>inline-block</option>
+          <option>none</option>
+          <option>flex</option>
+          <option>inline-flex</option>
+          <option>grid</option>
+          <option>inline-grid</option>
+          <option>table</option>
+          <option>list-item</option>
+        </select>
+    </div>
+    <script src="cssdisplay.js"></script>
+
+    <hr>
+
+    <h2>CSS position</h2>
+    <p>The <strong>position</strong> CSS property sets how an element is positioned in a document.</p>
+
+    <ul>
+
+        <li>
+            <h3>Static</h3>
+            <p>The element i positioned according to the normal flow of the document, as if there were no CSS.</p>
+        </li>
+        <li>
+            <h3>Relative</h3>
+            <p>The element is positioned according to the normal flow of the document, and then offset <em>relative to itself</em> based on the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>. The offset does not affect the position of any other elements, so elements relatively positioned may overlap with other elements. </p>
+            <p>This value creates a new <code>stacking context</code> when the value of <code>z-index</code> is not auto.</p>
+        </li>
+        <li>
+            <h3>Absolute</h3>
+            <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to its closest positioned ancestor (parent element). Its final position is determined by the values of <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code>.</p>
+            <p>This value creates a new <code>stacking context</code> when the value of <code>z-index</code> is not auto.</p>
+        </li>
+        <li>
+            <h3>Fixed</h3>
+            <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. It is positioned relative to the initial containing block established by the viewport i.e. it is fixed to the viewport (screen) evem when webpage is scrolled or other functionalities are performed. ex: Navigation bar, Sidebar.</p>
+            <p>This value always creates a new <code>stacking context</code>. In printed documents, the element is placed in the same position on every page. The offset does not affect the position of any other elements.</p>
+        </li>
+        <li>
+            <h3>Sticky</h3>
+            <p>The element is positioned according to the normal flow of the document, and then offset relative to its nearest scrolling ancestor and containing block.</p>
+            <p>This value always creates a new <code>stacking context</code>. Note that a sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism" </p>
+            
+        </li>
+    </ul>
+
+    <p style="margin-left: 24px"><strong>Fixed vs Sticky positioning </strong> <br>
+        Element with 'position: fixed' property is fixed to the viewport and doesn’t move irrespective of scrolling. It never leaves the viewport position it was fixed to. Whereas Element with 'position: sticky' property can scroll to an offset value provided by the user. It leaves the viewport when its parent element scrolls off the viewport.
+    </p>
+
+
+    <h4 style="color:black;">z-index</h4>
+    <p>The <strong>z-index</strong> CSS property sets the z-order of a positioned element and its descendants or flex items. It defines the order of overlapping HTML elements. Elements with a larger z-index overlap those with a smaller one. For a positioned box (one with any position other than static), the z-index property specifies:
+        <ol>
+            <li>The stack level of the box in the current stacking context</li>
+            <li>Whether the box establishes a local stacking context</li>
+        </ol>
+    </p>
+
+    <h4 style="color: black;">Stacking Context</h4>
+    <p>The <strong>stacking context</strong> is a three-dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user, who is assumed to be facing the viewport or the webpage. HTML elements occupy this space in priority order based on element attributes (z-index).</p>
+    
+    <img src="images/stacking-context.png" alt="stacking-context">
+
+    <hr>
+
+    <h2>Center elements with CSS</h2>
+    <ol>
+        <li><strong>text-align</strong> <code>'text-align: center;'</code> inside the parent element (in CSS) will center every child element that doesn't have a width set.
+        </li>
+        <li><strong>margin</strong> <code>'margin:  0 auto 0 auto'</code> (shorthand) will center the element. 'auto' value centers the element horizontally and vertically so <code>'margin: 0 auto 0 auto;'</code> or <code>'margin: 0 auto;'</code> centers the HTML element horizontally</li>
+    </ol>
+
+    <hr>
+
+    <h2>float and clear</h2>
+    <p>The <strong>float</strong> and <strong>clear</strong> property of CSS can be used to place elements inside a container.</p>
+    
+    <h3>float</h3>
+    <p>The <strong>float</strong> CSS property places an element on the left or right side of its container, allowing text and inline elements to wrap around it. The element is removed from the normal flow of the page, though still remaining a part of the flow. </p>
+    <section class="sec">
+        <div class="float-left">left-text. CSS:<code>'float:left;'</code></div>
+        <div class="float-right">right-text. CSS:<code>'float:right;'</code></div>
+        <p>This is middle paragraph. It is supposed to be big and large to properly understand CSS <strong>float</strong> property. </p>
+    </section>
+
+    <h3>clear</h3>
+    <p>The <strong>clear</strong> CSS property sets whether an element must be moved below (cleared) floating elements that precede it. It is used for better handling of the float property. 
+        The clear property applies to floating and non-floating elements. When applied to non-floating blocks, it moves the border edge of the element down until it is below the margin edge of all relevant floats.  
+    </p>
+    <div class="wrapper">
+        <p class="clear-element1">This is left paragraph. It is supposed to be big and large to properly understand the concept of <strong>clear</strong> property in CSS with this example. The text in this paragraph is useless, might as well have used lorem ipsum.</p>
+        <p class="clear-element2">This is right paragraph.</p>
+        <p class="clear-left" style="margin-top:2px; width:50%">This paragraph clears left. CSS:<code>'float: left;'</code></p>
+    </div>
+
+    <hr>
+
+    <h2>Styling Text</h2>
+
+    <h3>font-size</h3>
+    <p>
+        The <strong>font-size</strong> CSS property sets the size of the font. There are several ways to specify the font size, including keywords or numerical values for pixels or ems. Choose the appropriate method based on the needs of the particular web page. The font-size property is specified in one of the following ways:
+        <ul>
+            <li>As one of the absolute-size (small, large, xx-large, etc), relative-size (smaller, larger) or math keywords</li>
+            <li>As a <code>length</code> (_px, _em, _rem) or a <code>percentage</code> (__%) relative to the  parentelement's font size.</li>
+        </ul>
+    </p>
+    <p>
+        The standard font-size in HTML/CSS is 16px. <br>
+        <code>em</code> (pronounced <em>M</em>) is same as %. em sets size of HTML element relative to the size of it's direct or nearest parent, while <code>rem</code> <em>(root-em)</em> works like % as well, but it sets the size of element relative to the HTML (root) font-size.
+    </p>
+    <div class="font-size">
+        <p>Example text</p>
+        <p style="font-size: 12px;">Example text set with CSS: <code>"font-size: 12px;"</code></p>
+        <p style="font-size: 120%;">Example text set with CSS: <code>"font-size: 120%;"</code></p>
+        <p style="font-size: 1.25 em;">Example text set with CSS: <code>"font-size: 1.25em;"</code></p>
+        <p style="font-size: 2 rem;">Example text set with CSS: <code>"font-size: 2 rem;"</code></p>
+        <p style="font-size: larger;">Example text set with CSS: <code>"font-size: larger;"</code></p>
+    </div>
+
+    <hr>
+
+    <h2>font-family</h2>
+    <p>
+        The <strong>font-family</strong> CSS property specifies a prioritized list of one or more font family names and/or generic family names for the selected element.
+        If the browser/operating system does not have the font of high priority installed, text is rendered in font of low priority. And if browser/os doesn;t have any of the specified font, text is rendered in default font <em>sans-serif</em>. This is known as Fallback font.
+        <code> font-family: "helvetica-new", helvetica, arial, sans-serif</code>
+    </p>
+    <p><strong>Font Embedding</strong>: Adding <code>&lt;link rel="preconnect" href="link of font from fonts.google.com"&gt;</code> in the head of the HTML document will add the font to the user's system if it is not installed.</p> 
+
+</body>  
